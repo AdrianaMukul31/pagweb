@@ -8,13 +8,45 @@
       font-family: Arial, sans-serif;
       color: #131313;
       text-align: center;
+      margin: 0;
+      padding: 0;
     }
 
     h1 {
       color: #050505;
+      margin-top: 20px;
     }
 
-    img {
+    .contenedor-central {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      gap: 40px;
+    }
+
+    .columna-botones {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .boton {
+      background-color: #ffffff;
+      color: #ee9eda;
+      border: 2px solid #131313;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton:hover {
+      background-color: #ffd6f6;
+    }
+
+    .imagen-sorpresa {
       border-radius: 10px;
       width: 200px;
     }
@@ -22,8 +54,23 @@
 </head>
 <body>
   <h1>¡Hola corazón!</h1>
-  <p>Esto lo hice para ti, puedes ir descubriendo 
-    que sorpresas tiene..</p>
-  <img src="images/los3temax.jpg" alt="Imagen de sorpresa">
+  <p>Esta es mi sorpresa para ti.</p>
+
+  <div class="contenedor-central">
+    <!-- Columna izquierda -->
+    <div class="columna-botones">
+      <a href="pagina1.html" class="boton">Página 1</a>
+      <a href="pagina2.html" class="boton">Página 2</a>
+    </div>
+
+    <!-- Imagen en el centro -->
+    <img src="images/los3corrd.jpg" alt="Imagen de sorpresa" class="imagen-sorpresa">
+
+    <!-- Columna derecha -->
+    <div class="columna-botones">
+      <a href="https://www.google.com" class="boton">Google</a>
+      <a href="https://www.youtube.com" class="boton">YouTube</a>
+    </div>
+  </div>
 </body>
 </html>
