@@ -4,7 +4,7 @@
   <title>Mi Primera Página</title>
   <style>
     body {
-      background-color: #fe3fce;
+      background-color: #f33939;
       font-family: Arial, sans-serif;
       color: #131313;
       text-align: center;
@@ -22,7 +22,6 @@
       justify-content: center;
       align-items: center;
       margin-top: 40px;
-      gap: 40px;
     }
 
     .columna-botones {
@@ -31,9 +30,17 @@
       gap: 15px;
     }
 
+    .columna-izquierda {
+      margin-right: 60px; /* separa de la imagen */
+    }
+
+    .columna-derecha {
+      margin-left: 60px; /* separa de la imagen */
+    }
+
     .boton {
       background-color: #ffffff;
-      color: #ee9eda;
+      color: #f87986;
       border: 2px solid #131313;
       padding: 10px 20px;
       text-decoration: none;
@@ -58,7 +65,7 @@
 
   <div class="contenedor-central">
     <!-- Columna izquierda -->
-    <div class="columna-botones">
+    <div class="columna-botones columna-izquierda">
       <a href="pagina1.html" class="boton">Página 1</a>
       <a href="pagina2.html" class="boton">Página 2</a>
     </div>
@@ -67,7 +74,7 @@
     <img src="images/los3corrd.jpg" alt="Imagen de sorpresa" class="imagen-sorpresa">
 
     <!-- Columna derecha -->
-    <div class="columna-botones">
+    <div class="columna-botones columna-derecha">
       <a href="https://www.google.com" class="boton">Google</a>
       <a href="https://www.youtube.com" class="boton">YouTube</a>
     </div>
