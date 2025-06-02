@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amor desde el 2019 | Netflix</title>
   <style>
     * {
@@ -76,12 +76,12 @@
 
     .right {
       flex: 1 1 300px;
-    }
-
-    .right img {
-      width: 100%;
+      min-height: 250px;
+      background-image: url("images/playa.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
       border-radius: 10px;
-      object-fit: cover;
     }
 
     /* 🔹 SECCIÓN POPULARES */
@@ -102,15 +102,19 @@
     }
 
     .thumbnail {
-      width: calc(33.33% - 10px);
-      border-radius: 6px;
-      overflow: hidden;
+      width: calc(20% - 10px);     /* Más pequeñas */
+      min-width: 100px;
+      aspect-ratio: 3/2;           /* Un poco más cuadradas */
+      background-color: #333;
+      border-radius: 20px;         /* Esquinas ovaladas */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease;
     }
 
-    .thumbnail img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .thumbnail:hover {
+      transform: scale(1.03);      /* Animación al pasar el mouse */
     }
 
     /* 📱 Responsive */
@@ -124,7 +128,7 @@
       }
 
       .thumbnail {
-        width: calc(50% - 10px);
+        width: calc(48% - 10px);   /* Ajuste para tablet */
       }
     }
 
@@ -171,21 +175,19 @@
         Y esta historia, aún no termina.
       </div>
     </div>
-    <div class="right">
-      <img src="images/playa.jpg" alt="Pareja feliz">
-    </div>
+    <div class="right"></div>
   </div>
 
   <!-- 🔹 POPULARES -->
   <div class="section">
     <h2>Populares en Netflix</h2>
     <div class="thumbnails">
-      <div class="thumbnail"><img src="images/playa2.jpg" alt="Imagen 1"></div>
-      <div class="thumbnail"><img src="images/los3temax.jpg" alt="Imagen 2"></div>
-      <div class="thumbnail"><img src="images/el.jpg" alt="Imagen 3"></div>
-      <div class="thumbnail"><img src="images/cacalchen2.jpg" alt="Imagen 4"></div>
-      <div class="thumbnail"><img src="images/ropas.jpg" alt="Imagen 5"></div>
-      <div class="thumbnail"><img src="images/anillo.jpg" alt="Imagen 6"></div>
+      <div class="thumbnail" style="background-image: url('images/playa2.jpg');"></div>
+      <div class="thumbnail" style="background-image: url('images/los3temax.jpg');"></div>
+      <div class="thumbnail" style="background-image: url('images/el.jpg');"></div>
+      <div class="thumbnail" style="background-image: url('images/cacalchen2.jpg');"></div>
+      <div class="thumbnail" style="background-image: url('images/ropas.jpg');"></div>
+      <div class="thumbnail" style="background-image: url('images/anillo.jpg');"></div>
     </div>
   </div>
 
