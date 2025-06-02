@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Primera Página</title>
   <style>
     body {
-      background-color: #f33939;
+      background-color: #f3abd8;
       font-family: Arial, sans-serif;
       color: #131313;
       text-align: center;
@@ -15,66 +17,102 @@
     h1 {
       color: #050505;
       margin-top: 20px;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 24px;
+      margin: 15px 30px;
     }
 
     .contenedor-central {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
       margin-top: 40px;
+      gap: 30px;
     }
 
     .columna-botones {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-    }
-
-    .columna-izquierda {
-      margin-right: 60px; /* separa de la imagen */
-    }
-
-    .columna-derecha {
-      margin-left: 60px; /* separa de la imagen */
+      gap: 30px;
     }
 
     .boton {
       background-color: #ffffff;
       color: #f87986;
-      border: 2px solid #131313;
-      padding: 10px 20px;
+      border: 3px solid #131313;
+      padding: 18px 30px;
+      font-size: 20px;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 14px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .boton:hover {
       background-color: #ffd6f6;
+      transform: scale(1.08);
     }
 
     .imagen-sorpresa {
-      border-radius: 10px;
-      width: 200px;
+      border-radius: 14px;
+      width: 250px;
+      height: auto;
+      margin: 20px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .boton {
+        font-size: 18px;
+        padding: 16px 24px;
+      }
+
+      .columna-botones {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contenedor-central {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .imagen-sorpresa {
+        width: 80%;
+        max-width: 300px;
+      }
     }
   </style>
 </head>
 <body>
   <h1>¡Hola corazón!</h1>
-  <p>Esta es mi sorpresa para ti.</p>
+  <p>"Esta es mi sorpresa para ti mi corazón, cada botón guarda un pedacito de mi corazón… ¿Te animas a descubrirlos?"</p>
 
   <div class="contenedor-central">
     <!-- Columna izquierda -->
-    <div class="columna-botones columna-izquierda">
-      <a href="pagina1.html" class="boton">Página 1</a>
-      <a href="pagina2.html" class="boton">Página 2</a>
+    <div class="columna-botones">
+      <a href="pagina1.html" class="boton">Netflix</a>
+      <a href="pagina2.html" class="boton">YouTube</a>
     </div>
 
-    <!-- Imagen en el centro -->
-    <img src="images/los3corrd.jpg" alt="Imagen de sorpresa" class="imagen-sorpresa">
+    <!-- Imagen al centro -->
+    <img src="images/los3temax.jpg" alt="Imagen de sorpresa" class="imagen-sorpresa">
 
     <!-- Columna derecha -->
-    <div class="columna-botones columna-derecha">
+    <div class="columna-botones">
       <a href="https://www.google.com" class="boton">Google</a>
       <a href="https://www.youtube.com" class="boton">YouTube</a>
     </div>

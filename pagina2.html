@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página con Video</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #060606;
+      color: white;
+    }
+
+    .header {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .back-button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 24px;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .back-button:hover {
+      color: #888;
+    }
+
+    .header img {
+      height: 40px;
+    }
+
+    .header input {
+      flex: 1;
+      margin-left: 20px;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #000;
+      color: white;
+      border: 2px solid #222;
+      border-radius: 4px;
+      min-width: 200px;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .video-container {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .video-container video {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .video-container h2,
+    .video-container p {
+      color: white;
+      margin-top: 15px;
+    }
+
+    .sidebar {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .sidebar-buttons button {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: none;
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .sidebar-buttons button.active {
+      background-color: white;
+      color: black;
+      font-weight: bold;
+    }
+
+    .video-thumb {
+      background-color: #222;
+      border-radius: 6px;
+      padding: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .video-thumb img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .video-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-info span {
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .video-info small {
+      color: #aaa;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    /* MEDIA QUERY para pantallas pequeñas */
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .header input {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .sidebar-buttons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <button onclick="history.back()" class="back-button">←</button>
+    <img src="images/youtube.png" alt="Logo">
+    <input type="text" placeholder="Buscar...">
+  </div>
+
+  <div class="main">
+    <!-- Contenedor del video -->
+    <div class="video-container">
+      <video controls>
+        <source src="images/amor2.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+      <h2>Explicando el amor a mi yo del pasado</h2>
+      <p>Publicado hace 2 años · 4.6M vistas</p>
+    </div>
+
+    <!-- Barra lateral de videos -->
+    <div class="sidebar">
+      <!-- Botones tipo YouTube -->
+      <div class="sidebar-buttons">
+        <button class="active">Todos</button>
+        <button>Contenido de la serie</button>
+        <button>De Tlnovelas</button>
+      </div>
+
+      <!-- Videos sugeridos -->
+      <div class="video-thumb">
+        <img src="images/cacalchen2.jpg" alt="thumb">
+        <div class="video-info">
+          <span>De viaje</span>
+          <small>Publicado por Tlnovelas</small>
+        </div>
+      </div>
+
+      <div class="video-thumb">
+        <img src="images/cacalchen.jpg" alt="thumb">
+        <div class="video-info">
+          <span>La fotógrafa</span>
+          <small>Publicado por Tlnovelas</small>
+        </div>
+      </div>
+
+      <div class="video-thumb">
+        <img src="images/dzidzan.jpg" alt="thumb">
+        <div class="video-info">
+          <span>El día de premios</span>
+          <small>Publicado por Distrito Comedia</small>
+        </div>
+      </div>
+
+      <div class="video-thumb">
+        <img src="images/ropas2.jpg" alt="thumb">
+        <div class="video-info">
+          <span>Playita</span>
+          <small>Publicado por Distrito Comedia</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
